@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { View, Text, Image, FlatList } from 'react-native';
+import { View, Text, Image, StyleSheet, FlatList } from 'react-native';
 
 export const ItemsSection = styled(View)`
   background-color: #f6f6f6;
@@ -9,6 +9,7 @@ export const ItemsSection = styled(View)`
 export const ListingTitle = styled(Text)`
   font-weight: bold;
   font-size: 22px;
+  font-family: 'Open Sans';
 `;
 
 export const CardWrapper = styled(View)`
@@ -17,12 +18,16 @@ export const CardWrapper = styled(View)`
   margin: 0 20px 20px 0;
 `;
 
+export const ProductImage = styled(Image)`
+  width: 100%;
+`;
+
 export const InnerCard = styled(View)`
   padding: 10px;
 `;
 
 export const ProductName = styled(Text)`
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   margin-top: 5px;
 `;
@@ -31,6 +36,7 @@ export const SmallText = styled(Text)`
   color: #a0a0a0;
   font-size: 10px;
   font-weight: 700;
+  font-family: 'Roboto';
 `;
 
 export const PriceUserWrapper = styled(View)`
@@ -43,8 +49,9 @@ export const PriceUserWrapper = styled(View)`
 
 export const Price = styled(Text)`
   color: #e82a30;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
+  font-family: 'Open Sans';
 `;
 
 export const Avatar = styled(Image)`
@@ -63,4 +70,24 @@ export const Grid = styled(View)`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding-bottom: 30px;
+  margin-top: 24px;
 `;
+
+export const Carousel = styled(FlatList)`
+  margin-top: 24px;
+`;
+
+export const styles = StyleSheet.create({
+  shadow: {
+    shadowColor: '#00000060',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 5,
+  },
+});

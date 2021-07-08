@@ -19,6 +19,7 @@ export const Title = styled(Text)`
   color: #ffffff;
   width: 80%;
   font-weight: bold;
+  font-family: 'Open Sans';
   padding: 10px 30px 0;
 `;
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Image, Text } from 'react-native';
 
 import {
   CardWrapper,
@@ -10,17 +9,14 @@ import {
   Price,
   Avatar,
   AvatarWrapper,
+  styles,
+  ProductImage,
 } from './styles';
 
-const ProductCard = ({ name, image }) => {
+const ProductCard = ({ name, image, price }) => {
   return (
-    <CardWrapper>
-      <Image
-        style={{
-          width: '100%',
-        }}
-        source={image}
-      />
+    <CardWrapper style={styles.shadow}>
+      <ProductImage source={image} />
       <InnerCard>
         <SmallText>VNDS • 11</SmallText>
         <ProductName>{name}</ProductName>
@@ -29,7 +25,7 @@ const ProductCard = ({ name, image }) => {
             <Avatar source={require('../../images/avatar.png')} />
             <SmallText>ADRIEN</SmallText>
           </AvatarWrapper>
-          <Price>$460</Price>
+          <Price>${price}</Price>
         </PriceUserWrapper>
       </InnerCard>
     </CardWrapper>
