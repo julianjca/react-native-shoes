@@ -10,9 +10,19 @@ import React from 'react';
 // import Svg, {Path} from 'react-native-svg';
 import styled from 'styled-components';
 
-import { SafeAreaView, ScrollView, StatusBar, View } from 'react-native';
+import {
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  View,
+  Image,
+  StyleSheet,
+  Text,
+} from 'react-native';
 
 import Header from './src/components/Header/index';
+import HeroShoes from './src/components/Hero/shoes';
+import Hero from './src/components/Hero';
 
 const Section = styled(View)`
   background-color: #1e1d1d;
@@ -34,7 +44,14 @@ const App = () => {
         style={backgroundStyle}>
         <Section>
           <Header />
+          <Hero />
         </Section>
+        <View
+          style={{
+            backgroundColor: '#ffffff',
+          }}>
+          <HeroShoes />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
