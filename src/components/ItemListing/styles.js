@@ -59,7 +59,7 @@ export const AvatarWrapper = styled(View)`
   flex-direction: row;
 `;
 
-export const Grid = styled(FlatList)`
+export const Grid = styled(View)`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
