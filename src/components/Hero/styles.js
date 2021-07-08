@@ -49,7 +49,7 @@ export const smallImageStyles = StyleSheet.create({
 });
 
 export const HeroSection = styled(View)`
-  margin-top: 24px;
+  margin-top: 12px;
   width: 95%;
   align-self: flex-end;
 `;
