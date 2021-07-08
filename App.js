@@ -10,27 +10,13 @@ import React from 'react';
 // import Svg, {Path} from 'react-native-svg';
 import styled from 'styled-components';
 
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  View,
-} from 'react-native';
+import { SafeAreaView, ScrollView, StatusBar, View } from 'react-native';
 
-import BackIcon from './src/icons/arrow_back_ios.svg';
-
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import Header from './src/components/Header/index';
 
 const Section = styled(View)`
   background-color: #1e1d1d;
   height: 500px;
-`;
-
-const Header = styled(View)`
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px 15px;
 `;
 
 const App = () => {
@@ -47,35 +33,11 @@ const App = () => {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Section>
-          <Header>
-            <View>
-              <BackIcon width={24} height={24} />
-            </View>
-            <View />
-          </Header>
+          <Header />
         </Section>
       </ScrollView>
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;
